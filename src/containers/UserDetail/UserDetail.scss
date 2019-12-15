@@ -1,0 +1,53 @@
+.userDetailContainer {
+  width: 100%;
+  max-width: 1288px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+// INFO
+
+.userInfoContainer {
+  width: 25%;
+  border: 1px solid red;
+  padding-right: 3rem;
+  & .userPhoto {
+    border: 1px solid red;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//ACTIVITY
+
+.userActivityContainer {
+  border: 1px solid blue;
+  flex: 1;
+}
+
+//TAB
+.userTabs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  & .tab {
+    padding: 16px 8px;
+    margin-right: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    cursor: pointer;
+    &:hover {
+      border-bottom-color: #d1d5da;
+    }
+    &.active {
+      border-bottom-color: #e36209;
+      & .normaltext {
+        color: #24292e;
+        font-weight: bold;
+      }
+    }
+  }
+}
