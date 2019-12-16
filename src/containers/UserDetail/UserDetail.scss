@@ -1,4 +1,5 @@
 .userDetailContainer {
+  margin-top: calc(46px + 24px);
   width: 100%;
   max-width: 1288px;
   display: flex;
@@ -9,8 +10,8 @@
 // INFO
 
 .userInfoContainer {
-  width: 25%;
-  border: 1px solid red;
+  max-width: 25%;
+  min-width: 260px;
   padding-right: 3rem;
   & .userPhoto {
     border: 1px solid red;
@@ -24,7 +25,6 @@
 //ACTIVITY
 
 .userActivityContainer {
-  border: 1px solid blue;
   flex: 1;
 }
 
@@ -33,6 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-bottom: 1px solid rgba(209, 213, 218, 0.5);
   & .tab {
     padding: 16px 8px;
     margin-right: 1rem;
@@ -50,4 +51,69 @@
       }
     }
   }
+}
+
+// REPO
+
+.reposContainer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & .repo {
+    min-height: 150px;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    width: 48%;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .repoName {
+    margin-bottom: 1rem;
+  }
+  & .repoActions {
+    & .repoLanguaje {
+      display: flex;
+      & .smallText {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.repoLangColor {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  top: 1px;
+  margin-right: 0.2rem;
+}
+
+.js {
+  background: #f1e05a;
+}
+.css {
+  background: rgb(56, 56, 216);
+}
+.html {
+  background: rgb(240, 175, 54);
+}
+.java {
+  background: rgb(128, 43, 43);
+}
+.defaultLanguaje {
+  background: rgb(27, 189, 27);
+}
+
+// overview
+
+.overView {
+  margin-top: 1rem;
 }

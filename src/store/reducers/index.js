@@ -1,6 +1,8 @@
-import { combineReducers } from "redux";
-import pruebaReducer from "./prueba";
+import { combineReducers } from 'redux';
+import searchUserReducer from './searchUser';
+import userData from './userDetail';
 
 export const rootReducer = combineReducers({
-  prueba: pruebaReducer
+  searchUser: searchUserReducer,
+  userData: userData,
 });

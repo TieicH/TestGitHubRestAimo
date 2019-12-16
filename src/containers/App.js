@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.scss";
-import { Route, Switch } from "react-router-dom";
-import SearchPage from "./SearchPage/SearchPage";
-import UserDetail from "./UserDetail/UserDetail";
+import React from 'react';
+import './App.scss';
+import { Route, Switch } from 'react-router-dom';
+import SearchPage from './SearchPage/SearchPage';
+import UserDetail from './UserDetail/UserDetail';
 
 class App extends React.Component {
   render() {
