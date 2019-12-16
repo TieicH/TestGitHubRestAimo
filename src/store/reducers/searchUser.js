@@ -47,6 +47,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         enableInputSearch: false,
       };
+    case actionTypes.ENABLE_SEARCH_INPUT:
+      return {
+        ...state,
+        enableInputSearch: true,
+      };
   }
   return state;
 };

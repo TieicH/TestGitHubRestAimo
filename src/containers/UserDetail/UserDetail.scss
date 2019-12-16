@@ -1,10 +1,21 @@
 .userDetailContainer {
-  margin-top: calc(46px + 24px);
+  margin-top: 2rem;
   width: 100%;
+  padding: 0 1rem;
   max-width: 1288px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+}
+
+//NAV
+.userNavExtraInfo {
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 // INFO
@@ -13,9 +24,25 @@
   max-width: 25%;
   min-width: 260px;
   padding-right: 3rem;
+  @media (max-width: 1024px) {
+    max-width: 37%;
+  }
+  @media (max-width: 850px) {
+    max-width: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  @media (max-width: 560px) {
+    flex-direction: column;
+  }
   & .userPhoto {
-    border: 1px solid red;
+    margin-bottom: 1rem;
+    border: 1px solid #d6d6d6;
     width: 100%;
+    max-width: 200px;
+    margin-right: 2rem;
     img {
       width: 100%;
     }
@@ -26,6 +53,7 @@
 
 .userActivityContainer {
   flex: 1;
+  margin-bottom: 4rem;
 }
 
 //TAB
@@ -34,12 +62,21 @@
   align-items: center;
   justify-content: flex-start;
   border-bottom: 1px solid rgba(209, 213, 218, 0.5);
+  @media (max-width: 850px) {
+    width: 100%;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
   & .tab {
     padding: 16px 8px;
     margin-right: 1rem;
     border-bottom: 2px solid transparent;
     transition: all 0.25s;
     cursor: pointer;
+    @media (max-width: 850px) {
+      width: 100%;
+      margin-right: 0;
+    }
     &:hover {
       border-bottom-color: #d1d5da;
     }
@@ -62,7 +99,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   & .repo {
-    min-height: 150px;
+    min-height: 130px;
     border: 1px solid #d1d5da;
     border-radius: 3px;
     width: 48%;
@@ -72,6 +109,9 @@
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 1rem;
+    @media (max-width: 850px) {
+      width: 100%;
+    }
   }
   .repoName {
     margin-bottom: 1rem;
@@ -116,4 +156,52 @@
 
 .overView {
   margin-top: 1rem;
+}
+
+// userdetail
+
+.userDescription {
+  margin-bottom: 0.5rem;
+}
+
+.userInfoDetail {
+  margin-bottom: 0.3rem;
+  i {
+    min-width: 22px;
+    margin-right: 0.3rem;
+    text-align: right;
+  }
+}
+
+.userBadges {
+  margin-top: 1.2rem;
+}
+
+.userContributions {
+  margin-top: 1.2rem;
+  .userContriContainer {
+    margin-top: 0.5rem;
+    width: 100%;
+    .orgImage {
+      width: 33px;
+      height: 33px;
+      margin: 0.2rem;
+      border-radius: 5px;
+    }
+  }
+}
+
+// HEATMAP
+
+.userActivityResume {
+  margin-top: 2rem;
+  @media (max-width: 600px) {
+    display: none;
+  }
+  .heatMap {
+    width: 80%;
+    @media (max-width: 850px) {
+      width: 100%;
+    }
+  }
 }

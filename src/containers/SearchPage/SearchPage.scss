@@ -5,12 +5,20 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  h1 {
+    text-align: center;
+  }
 }
 
 .searchComponent {
   margin-top: 3rem;
   width: 400px;
   position: relative;
+  @media (max-width: 480px) {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
   .inputSearch {
     outline: none;
     width: 100%;

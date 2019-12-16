@@ -24,6 +24,10 @@ export const disableSearchInput = () => ({
   type: actionType.DISABLE_SEARCH_INPUT,
 });
 
+export const enableSearchInput = () => ({
+  type: actionType.ENABLE_SEARCH_INPUT,
+});
+
 export const asyncSearchUsers = (userText) => {
   return (dispatch) => {
     if (userText === '') {

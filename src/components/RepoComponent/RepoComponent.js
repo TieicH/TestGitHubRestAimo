@@ -15,16 +15,22 @@ const UserRepos = (props) => {
             </div>
             <div className="repoActions">
               <div className="repoLanguaje">
-                <p className="smallText grayText2">
-                  <span className={`repoLangColor ${colorByLang(repo.language)}`}></span>
-                  {repo.language}
-                </p>
-                <p className="smallText grayText2 cursorPointer iconText">
-                  <i className="fas fa-star"></i> {getFixedNoRonding(repo.stargazers_count, 1)}
-                </p>
-                <p className="smallText grayText2 cursorPointer iconText">
-                  <i className="fas fa-code-branch"></i> {repo.forks_count}
-                </p>
+                {repo.language ? (
+                  <p className="smallText grayText2">
+                    <span className={`repoLangColor ${colorByLang(repo.language)}`}></span>
+                    {repo.language}
+                  </p>
+                ) : null}
+                {repo.stargazers_count ? (
+                  <p className="smallText grayText2 cursorPointer iconText">
+                    <i className="fas fa-star"></i> {getFixedNoRonding(repo.stargazers_count, 1)}
+                  </p>
+                ) : null}
+                {repo.forks_count ? (
+                  <p className="smallText grayText2 cursorPointer iconText">
+                    <i className="fas fa-code-branch"></i> {repo.forks_count}
+                  </p>
+                ) : null}
               </div>
             </div>
           </div>

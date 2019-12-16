@@ -1,2 +1,2 @@
-export { asyncSearchUsers } from './searchUser';
+export { asyncSearchUsers, closeSearchUser, disableSearchInput, enableSearchInput } from './searchUser';
 export { asyncUserData } from './userDetail';

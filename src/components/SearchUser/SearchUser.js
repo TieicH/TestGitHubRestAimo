@@ -5,11 +5,14 @@ import * as actions from '../../store/actions/index';
 
 class SearchUser extends React.Component {
   handleUserDetailRoute = (user) => {
-    const { getUserData } = this.props;
+    const { getUserData, closeResult, disabledInput, enabledInput } = this.props;
+    closeResult();
+    disabledInput();
     const { url: userUrl, organizations_url: orgUrl, repos_url: repoUrl, avatar_url: userImage, login: userName } = user;
     const reposUser = `https://api.github.com/users/${userName}/repos?direction=desc&type=all&sort=updated&per_page=6`;
     const data = { userUrl, orgUrl, reposUser };
     getUserData(data).then((respose) => {
+      enabledInput();
       if (respose.success) {
         this.props.history.push({
           pathname: `/user/${userName}`,
@@ -54,6 +57,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     searchUserByText: (userText) => dispatch(actions.asyncSearchUsers(userText)),
     getUserData: (user) => dispatch(actions.asyncUserData(user)),
+    closeResult: () => dispatch(actions.closeSearchUser()),
+    disabledInput: () => dispatch(actions.disableSearchInput()),
+    enabledInput: () => dispatch(actions.enableSearchInput()),
   };
 };
 

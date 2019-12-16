@@ -12,16 +12,20 @@ export const getFixedNoRonding = (number, fixedLength) => {
 };
 
 export const colorByLang = (language) => {
-  switch (language.toLocaleLowerCase()) {
-    case 'javascript':
-      return 'js';
-    case 'html':
-      return 'html';
-    case 'java':
-      return 'java';
-    case 'css':
-      return 'css';
-    default:
-      return 'defaultLanguaje';
+  if (language) {
+    switch (language.toLocaleLowerCase()) {
+      case 'javascript':
+        return 'js';
+      case 'html':
+        return 'html';
+      case 'java':
+        return 'java';
+      case 'css':
+        return 'css';
+      default:
+        return 'defaultLanguaje';
+    }
+  } else {
+    return '';
   }
 };
